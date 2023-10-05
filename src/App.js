@@ -3,6 +3,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { createClient } from "contentful";
 import Category from "./components/category/Category";
 import CategoryItem from "./components/categoryItem/CategoryItem";
+import Sound from "./components/sound/Sound";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
@@ -10,6 +11,9 @@ function App() {
 
   const [content, setContent] = useState({});
   const [activeCategoryData, setActiveCategoryData] = useState(null);
+  const [activeSoundsData, setActiveSoundsData] = useState(null);
+
+  console.log(activeSoundsData);
 
   const { authorName, title, subtitle, background, categories } = content;
 
@@ -24,7 +28,7 @@ function App() {
 
   useEffect(() => {
     client
-      .getEntries({ content_type: "homepage" })
+      .getEntries({ content_type: "homepage", include: 10 })
       .then((response) => {
         setContent(response?.items[0]?.fields);
       })
@@ -66,8 +70,18 @@ function App() {
     return null;
   }
 
+  if (activeSoundsData) {
+    return <Sound soundData={activeSoundsData} />;
+  }
+
   if (activeCategoryData) {
-    return <Category categoryData={activeCategoryData} />;
+    return (
+      <Category
+        categoryData={activeCategoryData}
+        setActiveCategoryData={setActiveCategoryData}
+        setActiveSoundsData={setActiveSoundsData}
+      />
+    );
   }
 
   return <div className="App">{mainLayout}</div>;
