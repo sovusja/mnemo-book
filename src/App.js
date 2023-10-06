@@ -4,6 +4,10 @@ import { createClient } from "contentful";
 import Category from "./components/category/Category";
 import CategoryItem from "./components/categoryItem/CategoryItem";
 import Sound from "./components/sound/Sound";
+import MnemoSQRT from "./components/mnemoSQRT/MnemoSQRT";
+import MnemoTrack from "./components/mnemoTrack/MnemoTrack";
+import MnemoTable from "./components/mnemoTable/MnemoTable";
+import CleanSpeaker from "./components/cleanSpeaker/CleanSpeaker";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
@@ -12,8 +16,8 @@ function App() {
   const [content, setContent] = useState({});
   const [activeCategoryData, setActiveCategoryData] = useState(null);
   const [activeSoundsData, setActiveSoundsData] = useState(null);
-
-  console.log(activeSoundsData);
+  const [currentActivity, setCurrentActivity] = useState(null);
+  console.log(currentActivity);
 
   const { authorName, title, subtitle, background, categories } = content;
 
@@ -34,6 +38,13 @@ function App() {
       })
       .catch(console.error);
   }, [client]);
+
+  const renderMap = {
+    sqrt: <MnemoSQRT currentActivity={currentActivity} />,
+    table: <MnemoTable currentActivity={currentActivity} />,
+    track: <MnemoTrack currentActivity={currentActivity} />,
+    speaker: <CleanSpeaker currentActivity={currentActivity} />,
+  };
 
   const mainLayout = (
     <>
@@ -70,8 +81,18 @@ function App() {
     return null;
   }
 
+  if (currentActivity) {
+    return renderMap[currentActivity.type];
+  }
+
   if (activeSoundsData) {
-    return <Sound soundData={activeSoundsData} />;
+    return (
+      <Sound
+        soundData={activeSoundsData}
+        setActiveSoundsData={setActiveSoundsData}
+        setCurrentActivity={setCurrentActivity}
+      />
+    );
   }
 
   if (activeCategoryData) {

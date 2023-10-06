@@ -2,7 +2,7 @@ import React from "react";
 import "./BackBtn.scss";
 import BtnIcon from "../../assets/03.webp";
 
-const BackSpace = (props) => {
+const BackBtn = (props) => {
   const { onClick } = props;
 
   return (
@@ -12,4 +12,4 @@ const BackSpace = (props) => {
   );
 };
 
-export default BackSpace;
+export default BackBtn;

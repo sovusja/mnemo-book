@@ -10,7 +10,7 @@ const Category = (props) => {
     setActiveCategoryData(null);
   };
 
-  const categoryLayout = (
+  return (
     <>
       {categoryData.background && (
         <img
@@ -41,8 +41,6 @@ const Category = (props) => {
       </div>
     </>
   );
-
-  return <div>{categoryLayout}</div>;
 };
 
 export default Category;
