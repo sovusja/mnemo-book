@@ -17,7 +17,6 @@ function App() {
   const [activeCategoryData, setActiveCategoryData] = useState(null);
   const [activeSoundsData, setActiveSoundsData] = useState(null);
   const [currentActivity, setCurrentActivity] = useState(null);
-  console.log(currentActivity);
 
   const { authorName, title, subtitle, background, categories } = content;
 
@@ -40,10 +39,30 @@ function App() {
   }, [client]);
 
   const renderMap = {
-    sqrt: <MnemoSQRT currentActivity={currentActivity} />,
-    table: <MnemoTable currentActivity={currentActivity} />,
-    track: <MnemoTrack currentActivity={currentActivity} />,
-    speaker: <CleanSpeaker currentActivity={currentActivity} />,
+    sqrt: (
+      <MnemoSQRT
+        currentActivity={currentActivity}
+        setCurrentActivity={setCurrentActivity}
+      />
+    ),
+    table: (
+      <MnemoTable
+        currentActivity={currentActivity}
+        setCurrentActivity={setCurrentActivity}
+      />
+    ),
+    track: (
+      <MnemoTrack
+        currentActivity={currentActivity}
+        setCurrentActivity={setCurrentActivity}
+      />
+    ),
+    speaker: (
+      <CleanSpeaker
+        currentActivity={currentActivity}
+        setCurrentActivity={setCurrentActivity}
+      />
+    ),
   };
 
   const mainLayout = (

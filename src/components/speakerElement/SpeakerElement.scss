@@ -1,0 +1,21 @@
+.element-speaker {
+  width: 200px;
+  height: 300px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+
+  &__text1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text2 {
+    padding-top: 15px;
+    text-align: center;
+  }
+}

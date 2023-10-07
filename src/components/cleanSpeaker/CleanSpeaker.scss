@@ -1,0 +1,34 @@
+.page__background {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+
+  &__title {
+    background-color: #faeade;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: 4px solid #420b0b;
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    background-color: #cf9a9a;
+  }
+}
