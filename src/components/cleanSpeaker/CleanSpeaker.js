@@ -10,7 +10,6 @@ const CleanSpeaker = (props) => {
     setCurrentActivity(null);
   };
 
-  console.log(currentActivity);
   return (
     <>
       {currentActivity.background && (
