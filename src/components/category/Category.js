@@ -2,30 +2,58 @@ import React from "react";
 import "./Category.scss";
 import BackBtn from "../backBtn/BackBtn";
 import SoundItem from "../soundItem/SoundItem";
+import PopUp from "../popUp/PopUp";
+import PopUpBtn from "../popUpBtn/PopUpBtn";
 
 const Category = (props) => {
-  const { categoryData, setActiveCategoryData, setActiveSoundsData } = props;
+  const {
+    categoryData,
+    setActiveCategoryData,
+    setActiveSoundsData,
+    isShowPopUp,
+    setIsShowPopUp,
+  } = props;
 
-  const clickHandler = () => {
+  const clickHandlerBack = () => {
     setActiveCategoryData(null);
+  };
+
+  const clickHandlerPopUp = () => {
+    setIsShowPopUp(!isShowPopUp);
+  };
+  const clickHandlerPopUpBack = (e) => {
+    if (e.target === e.currentTarget) {
+      setIsShowPopUp(!isShowPopUp);
+    }
   };
 
   return (
     <>
+      {isShowPopUp && (
+        <PopUp
+          onClick={clickHandlerPopUpBack}
+          roadeMap={categoryData.roadeMap.fields}
+        />
+      )}
       {categoryData.background && (
         <img
           className="page__background"
           src={categoryData.background.fields.file.url}
         />
       )}
-      <BackBtn onClick={clickHandler} />
+      <BackBtn onClick={clickHandlerBack} />
 
       <div className="category">
         <div className="category__title">
           <h1 className="category__title--title">{categoryData.title}</h1>
         </div>
 
-        <div className="category__wanderer">бродилка</div>
+        {categoryData.roadeMap && (
+          <PopUpBtn
+            className="category__wanderer"
+            onClick={clickHandlerPopUp}
+          />
+        )}
 
         <div className="category__sounds">
           {categoryData.sounds.map((elem) => {

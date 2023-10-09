@@ -8,6 +8,7 @@ import MnemoSQRT from "./components/mnemoSQRT/MnemoSQRT";
 import MnemoTrack from "./components/mnemoTrack/MnemoTrack";
 import MnemoTable from "./components/mnemoTable/MnemoTable";
 import CleanSpeaker from "./components/cleanSpeaker/CleanSpeaker";
+import PopUp from "./components/popUp/PopUp";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
@@ -17,6 +18,7 @@ function App() {
   const [activeCategoryData, setActiveCategoryData] = useState(null);
   const [activeSoundsData, setActiveSoundsData] = useState(null);
   const [currentActivity, setCurrentActivity] = useState(null);
+  const [isShowPopUp, setIsShowPopUp] = useState(false);
 
   const { authorName, title, subtitle, background, categories } = content;
 
@@ -110,6 +112,8 @@ function App() {
         soundData={activeSoundsData}
         setActiveSoundsData={setActiveSoundsData}
         setCurrentActivity={setCurrentActivity}
+        isShowPopUp={isShowPopUp}
+        setIsShowPopUp={setIsShowPopUp}
       />
     );
   }
@@ -120,6 +124,8 @@ function App() {
         categoryData={activeCategoryData}
         setActiveCategoryData={setActiveCategoryData}
         setActiveSoundsData={setActiveSoundsData}
+        isShowPopUp={isShowPopUp}
+        setIsShowPopUp={setIsShowPopUp}
       />
     );
   }
