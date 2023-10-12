@@ -23,11 +23,17 @@
     border-radius: 30px;
     border: 4px solid #420b0b;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   &__block {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 15px;
+    display: flex;
+    max-width: 800px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
   }
 }

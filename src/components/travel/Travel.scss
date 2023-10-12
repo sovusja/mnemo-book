@@ -37,11 +37,6 @@
     grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 
-    &--img {
-      width: 100px;
-      height: 100px;
-    }
-
     &__elem {
       display: flex;
       flex-direction: row;
@@ -50,7 +45,14 @@
       gap: 20px;
 
       &-img {
-        height: 120px;
+        height: 150px;
+        border-radius: 15px;
+        transition: all ease 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       &-arrow {

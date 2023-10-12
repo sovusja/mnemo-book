@@ -10,6 +10,10 @@ const CategoryItem = (props) => {
 
   return (
     <div onClick={clickHandler} className="category-item">
+      <img
+        className="category-item__img"
+        src={categoryData.backgroundElement.fields.file.url}
+      />
       <div className="category-item__inner">{categoryData.title}</div>
     </div>
   );

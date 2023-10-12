@@ -4,6 +4,7 @@ import Travel from "../travel/Travel";
 
 const PopUp = (props) => {
   const { onClick, roadeMap } = props;
+
   return (
     <div className="pop-up" onClick={onClick}>
       <div className="pop-up__content">

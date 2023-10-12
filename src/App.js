@@ -8,7 +8,6 @@ import MnemoSQRT from "./components/mnemoSQRT/MnemoSQRT";
 import MnemoTrack from "./components/mnemoTrack/MnemoTrack";
 import MnemoTable from "./components/mnemoTable/MnemoTable";
 import CleanSpeaker from "./components/cleanSpeaker/CleanSpeaker";
-import PopUp from "./components/popUp/PopUp";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
