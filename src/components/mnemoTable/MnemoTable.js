@@ -10,6 +10,10 @@ const MnemoTable = (props) => {
     setCurrentActivity(null);
   };
 
+  const isSixPictures =
+    currentActivity.id === "l-mnemo-table" ||
+    currentActivity.id === "z-mnemo-table";
+
   return (
     <>
       {currentActivity.background && (
@@ -27,7 +31,7 @@ const MnemoTable = (props) => {
 
         <div
           style={{
-            gridTemplateColumns: `repeat(${currentActivity.columnCount}, 1fr)`,
+            maxWidth: `${isSixPictures ? "1239px" : "1250px"}`,
           }}
           className="table__block"
         >

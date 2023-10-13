@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .sound-item {
   display: flex;
   width: 275px;
@@ -6,6 +8,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all ease 0.2s;
+
   &:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
   }
@@ -27,5 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: $font-literata;
+    font-size: 25px;
+    font-weight: 600;
   }
 }

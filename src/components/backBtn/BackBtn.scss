@@ -1,8 +1,10 @@
+@import "../../global.scss";
+
 .back-btn {
   width: 100px;
   height: auto;
   padding: 120px 0 0 50px;
-  position: fixed;
+  position: absolute;
   z-index: -0.5;
   cursor: pointer;
 

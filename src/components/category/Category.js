@@ -52,6 +52,7 @@ const Category = (props) => {
           <PopUpBtn
             className="category__wanderer"
             onClick={clickHandlerPopUp}
+            roadeMap={categoryData.roadeMap.fields}
           />
         )}
 

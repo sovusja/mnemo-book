@@ -52,6 +52,7 @@ const Sound = (props) => {
           <PopUpBtn
             className="category__wanderer"
             onClick={clickHandlerPopUp}
+            roadeMap={soundData.roadeMap.fields}
           />
         )}
 

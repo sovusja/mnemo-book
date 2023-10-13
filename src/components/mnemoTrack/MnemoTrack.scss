@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .track {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,7 @@
     border-radius: 30px;
     border: 4px solid #420b0b;
     margin-bottom: 50px;
+    font-family: $font-literata;
   }
   &__block {
     display: grid;

@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .element-sqrt {
   width: 175px;
   height: 220px;
@@ -12,5 +14,8 @@
   &__text {
     text-align: center;
     padding-top: 15px;
+    font-family: $font-literata;
+    font-size: 25px;
+    font-weight: 600;
   }
 }

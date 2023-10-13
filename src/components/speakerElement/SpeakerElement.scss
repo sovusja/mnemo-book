@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .element-speaker {
   width: 200px;
   height: 300px;
@@ -8,6 +10,9 @@
   &__text1 {
     text-align: center;
     padding-bottom: 10px;
+    font-family: $font-literata;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   &__img {
@@ -17,5 +22,8 @@
   &__text2 {
     padding-top: 15px;
     text-align: center;
+    font-family: $font-literata;
+    font-size: 16px;
+    font-weight: 600;
   }
 }

@@ -1,8 +1,9 @@
+@import "../../global.scss";
+
 .travel {
   height: 100%;
   display: flex;
   justify-content: center;
-
   flex-direction: column;
 
   &__background {
@@ -27,6 +28,8 @@
     z-index: 3;
     position: relative;
     margin: 10px 15px;
+    font-family: $font-literata;
+    font-size: 13px;
   }
 
   &__content {

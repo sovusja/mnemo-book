@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Sofia+Sans:wght@400;600&display=swap");
+
+//Font
+$font-literata: "Literata", serif;
+$font-sofia: "Sofia Sans", sans-serif;
+
+//Mixins
+@mixin media-tablet {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

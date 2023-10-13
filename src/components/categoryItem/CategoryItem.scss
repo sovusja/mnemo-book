@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .category-item {
   display: flex;
   width: 350px;
@@ -6,6 +8,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all ease 0.2s;
+
   &:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
   }
@@ -28,5 +32,8 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    font-family: $font-literata;
+    font-size: 25px;
+    font-weight: 400;
   }
 }
