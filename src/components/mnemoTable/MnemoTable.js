@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MnemoTable.scss";
 import BackBtn from "../backBtn/BackBtn";
 import TableElement from "../tableElement/TableElement";
 
 const MnemoTable = (props) => {
   const { currentActivity, setCurrentActivity } = props;
+  const [activeState, setActiveState] = useState(0);
 
   const clickHandler = () => {
     setCurrentActivity(null);
@@ -35,11 +36,15 @@ const MnemoTable = (props) => {
           }}
           className="table__block"
         >
-          {currentActivity.images.map((elem) => {
+          {currentActivity.images.map((elem, index) => {
             return (
               <TableElement
                 currentElementData={elem.fields}
                 key={elem.fields.id}
+                activeState={activeState}
+                setActiveState={setActiveState}
+                count={currentActivity.images.length}
+                index={index}
               />
             );
           })}

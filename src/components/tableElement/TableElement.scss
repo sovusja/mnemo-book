@@ -6,6 +6,32 @@
   background-color: #ffffff;
   padding: 10px;
   border: 2px solid #0e20ac;
+  transition: all ease 3.5s;
+
+  &--active {
+    width: 300px;
+    height: 360px;
+    background-color: rgb(242, 235, 177);
+    padding: 10px;
+    border: 2px solid #0e20ac;
+    cursor: pointer;
+    transition: all ease 3.5s;
+
+    &__img {
+      width: 100%;
+      padding: 10px;
+    }
+    &__text {
+      text-align: center;
+      padding-top: 10px;
+      font-family: $font-literata;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    audio {
+      display: none;
+    }
+  }
 
   &__img {
     width: 100%;
@@ -17,5 +43,8 @@
     font-family: $font-literata;
     font-size: 16px;
     font-weight: 600;
+  }
+  audio {
+    display: none;
   }
 }

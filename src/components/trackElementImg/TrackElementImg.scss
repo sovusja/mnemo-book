@@ -1,0 +1,24 @@
+.track-elem {
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border: 2px solid #0e20ac;
+    padding: 20px 40px;
+    transition: all ease 1s;
+
+    &--active {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      border: 2px solid #0e20ac;
+      padding: 20px 40px;
+      transition: all ease 1s;
+      cursor: pointer;
+      background-color: rgb(242, 235, 177);
+    }
+  }
+}
+audio {
+  display: none;
+}

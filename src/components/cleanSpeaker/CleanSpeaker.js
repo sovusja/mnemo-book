@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CleanSpeaker.scss";
 import BackBtn from "../backBtn/BackBtn";
 import SpeakerElement from "../speakerElement/SpeakerElement";
 
 const CleanSpeaker = (props) => {
   const { currentActivity, setCurrentActivity } = props;
+  const [activeState, setActiveState] = useState(null);
 
   const clickHandler = () => {
     setCurrentActivity(null);
@@ -26,11 +27,14 @@ const CleanSpeaker = (props) => {
         </div>
 
         <div className="speaker__block">
-          {currentActivity.pictures.map((elem) => {
+          {currentActivity.pictures.map((elem, index) => {
             return (
               <SpeakerElement
                 currentElementData={elem.fields}
                 key={elem.fields.id}
+                activeState={activeState}
+                setActiveState={setActiveState}
+                index={index}
               />
             );
           })}
