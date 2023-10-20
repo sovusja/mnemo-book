@@ -1,10 +1,10 @@
 @import "./global.scss";
 
-.page__background {
+.homepage__background {
   position: fixed;
   z-index: -10;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 .main {
@@ -15,7 +15,8 @@
   padding-top: 50px;
 
   &__author {
-    margin-bottom: 30px;
+    margin-right: 50px;
+    align-self: flex-end;
     background-color: #faeade;
     padding: 10px 25px;
     border-radius: 15px;
@@ -25,11 +26,16 @@
     font-weight: 300;
   }
   &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #faeade;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     padding: 15px 40px;
     border-radius: 30px;
     border: 4px solid #420b0b;
@@ -41,10 +47,15 @@
 }
 
 .categories {
+  position: absolute;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
+  height: 25vh;
+  background-color: #fed0c4;
   flex-wrap: wrap;
+  z-index: 1;
   gap: 10px;
 }

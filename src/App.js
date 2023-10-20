@@ -69,7 +69,10 @@ function App() {
   const mainLayout = (
     <>
       {background && (
-        <img className="page__background" src={background.fields.file.url} />
+        <img
+          className="homepage__background"
+          src={background.fields.file.url}
+        />
       )}
       <div className="main">
         <div className="main__author">
