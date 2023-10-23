@@ -24,7 +24,7 @@ const MnemoTable = (props) => {
           alt="fon"
         />
       )}
-      <BackBtn onClick={clickHandler} />
+      <BackBtn isOnTop onClick={clickHandler} />
       <div className="table">
         <div className="table__title">
           <h1 className="table__title--title">{currentActivity.title}</h1>

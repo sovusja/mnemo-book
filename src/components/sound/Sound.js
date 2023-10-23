@@ -41,11 +41,13 @@ const Sound = (props) => {
           alt="fon"
         />
       )}
-      <BackBtn onClick={clickHandler} />
 
       <div className="sound">
-        <div className="sound__title">
-          <h1 className="sound__title--title">{soundData.title}</h1>
+        <div className="title-wrapper">
+          <BackBtn onClick={clickHandler} />
+          <div className="sound__title">
+            <h1 className="sound__title--title">{soundData.title}</h1>
+          </div>
         </div>
 
         {soundData.roadeMap && (

@@ -19,7 +19,7 @@ const MnemoSQRT = (props) => {
           alt="fon"
         />
       )}
-      <BackBtn onClick={clickHandler} />
+      <BackBtn isOnTop onClick={clickHandler} />
       <div className="sqrt">
         <div className="sqrt__title">
           <h1 className="sqrt__title--title">{currentActivity.title}</h1>

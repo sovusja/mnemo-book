@@ -14,10 +14,21 @@
     justify-content: center;
     flex-direction: column;
     padding: 15px 40px;
+    width: 500px;
     border-radius: 30px;
     border: 4px solid #420b0b;
     margin-bottom: 50px;
     font-family: $font-literata;
+
+    &--title {
+      @include media-mobile {
+        font-size: 20px;
+      }
+    }
+
+    @include media-mobile {
+      width: 275px;
+    }
   }
   &__block {
     display: grid;

@@ -19,6 +19,7 @@
     background-color: #faeade;
     display: flex;
     align-items: center;
+    width: 500px;
     justify-content: center;
     flex-direction: column;
     padding: 15px 40px;
@@ -27,6 +28,16 @@
     margin-bottom: 50px;
     text-align: center;
     font-family: $font-literata;
+
+    &--title {
+      @include media-mobile {
+        font-size: 20px;
+      }
+    }
+
+    @include media-mobile {
+      width: 275px;
+    }
   }
 
   &__block {

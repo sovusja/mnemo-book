@@ -19,7 +19,7 @@ const MnemoTrack = (props) => {
           alt="fon"
         />
       )}
-      <BackBtn onClick={clickHandler} />
+      <BackBtn isOnTop onClick={clickHandler} />
       <div className="track">
         <div className="track__title">
           <h1 className="track__title--title">{currentActivity.title}</h1>

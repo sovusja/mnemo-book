@@ -41,11 +41,13 @@ const Category = (props) => {
           src={categoryData.background.fields.file.url}
         />
       )}
-      <BackBtn onClick={clickHandlerBack} />
 
       <div className="category">
-        <div className="category__title">
-          <h1 className="category__title--title">{categoryData.title}</h1>
+        <div className="title-wrapper">
+          <BackBtn onClick={clickHandlerBack} />
+          <div className="category__title">
+            <h1 className="category__title--title">{categoryData.title}</h1>
+          </div>
         </div>
 
         {categoryData.roadeMap && (

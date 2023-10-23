@@ -11,8 +11,12 @@ const SoundActivity = (props) => {
   return (
     <div onClick={clickhandler} className="sound-activity">
       <img
-        className="sound-activity__img"
+        className="sound-activity__img-back"
         src={activityData.backgroundElement.fields.file.url}
+      />
+      <img
+        className="sound-activity__img-animal"
+        src={activityData.backgroundAnimal.fields.file.url}
       />
       <div className="sound-activity__inner">{activityData.title}</div>
     </div>

@@ -20,7 +20,7 @@ const CleanSpeaker = (props) => {
           alt="fon"
         />
       )}
-      <BackBtn onClick={clickHandler} />
+      <BackBtn isOnTop onClick={clickHandler} />
       <div className="speaker">
         <div className="speaker__title">
           <h1 className="speaker__title--title">{currentActivity.title}</h1>

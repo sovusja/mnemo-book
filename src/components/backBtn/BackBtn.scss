@@ -3,10 +3,62 @@
 .back-btn {
   width: 100px;
   height: auto;
-  padding: 120px 0 0 50px;
   position: absolute;
+  align-self: flex-start;
+  left: 200px;
   z-index: -0.5;
   cursor: pointer;
+
+  @include media-tablet {
+    left: 50px;
+  }
+
+  @include media-mobile {
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+  }
+
+  &__top {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    align-self: flex-start;
+    top: 75px;
+    left: 20px;
+    cursor: pointer;
+
+    @include media-tablet {
+      left: 25px;
+    }
+
+    @include media-mobile {
+      height: 40px;
+      width: 40px;
+      top: 110px;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+
+    .back-btn__img {
+      width: 100px;
+      height: 80px;
+      cursor: pointer;
+      background: none;
+      transition: all ease 0.2s;
+
+      @include media-mobile {
+        height: 40px;
+        width: 40px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 
   &__img {
     width: 100px;
@@ -14,6 +66,11 @@
     cursor: pointer;
     background: none;
     transition: all ease 0.2s;
+
+    @include media-mobile {
+      height: 40px;
+      width: 40px;
+    }
 
     &:hover {
       transform: scale(1.1);
