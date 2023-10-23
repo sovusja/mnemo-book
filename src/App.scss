@@ -48,6 +48,10 @@
       top: 15%;
       font-size: 12px;
     }
+
+    @include media-mobile {
+      top: 20%;
+    }
   }
 }
 
