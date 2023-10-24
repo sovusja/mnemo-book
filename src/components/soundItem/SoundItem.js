@@ -14,10 +14,12 @@ const SoundItem = (props) => {
       <img
         className="sound-item__img-back"
         src={soundData.backgroundElement.fields.file.url}
+        alt={soundData.backgroundElement.fields.file.name}
       />
       <img
         className="sound-item__img-animal"
         src={soundData.backgroundAnimal.fields.file.url}
+        alt={soundData.backgroundAnimal.fields.file.name}
       />
       <div className="sound-item__inner">{soundData.shortName}</div>
     </div>

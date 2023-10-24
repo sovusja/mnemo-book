@@ -19,6 +19,7 @@ const SqrtElement = (props) => {
       <img
         className="element-sqrt__img"
         src={currentElementData.image.fields.file.url}
+        alt={currentElementData.image.fields.file.name}
       />
       <h3 className="element-sqrt__text">{currentElementData.text}</h3>
       {soundData && (

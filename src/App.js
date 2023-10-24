@@ -8,6 +8,7 @@ import MnemoSQRT from "./components/mnemoSQRT/MnemoSQRT";
 import MnemoTrack from "./components/mnemoTrack/MnemoTrack";
 import MnemoTable from "./components/mnemoTable/MnemoTable";
 import CleanSpeaker from "./components/cleanSpeaker/CleanSpeaker";
+import LoaderGif from "./assets/Spinner-1s-200px.gif";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
@@ -27,7 +28,7 @@ function App() {
         space,
         accessToken,
       }),
-    []
+    [space, accessToken]
   );
 
   useEffect(() => {
@@ -72,6 +73,7 @@ function App() {
         <img
           className="homepage__background"
           src={background.fields.file.url}
+          alt={background.fields.file.name}
         />
       )}
       <div className="main">
@@ -100,8 +102,12 @@ function App() {
     </>
   );
 
-  if (!content) {
-    return null;
+  if (!Object.keys(content).length) {
+    return (
+      <h1 className="loading">
+        <img src={LoaderGif} alt="Loader" />
+      </h1>
+    );
   }
 
   if (currentActivity) {

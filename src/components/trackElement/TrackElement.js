@@ -8,6 +8,7 @@ const TrackElement = (props) => {
 
   const soundData = currentElementData?.fullPhrase?.fields.file.url;
   const audioRef = useRef(null);
+  const containerRef = useRef(null);
 
   const clickHandler = () => {
     if (!soundData) {
@@ -20,15 +21,17 @@ const TrackElement = (props) => {
   return (
     <>
       <div className="element-track">
-        <div className="element-track__images">
+        <div ref={containerRef} className="element-track__images">
           {currentElementData.images.map((item, index) => (
             <TrackElementImg
               img={item.fields.image.fields.file.url}
+              alt={item.fields.image.fields.file.name}
               audio={item.fields?.sound?.fields.file.url}
               activeState={activeState}
               setActiveState={setActiveState}
               count={currentElementData.images.length}
               index={index}
+              containerRef={containerRef}
             />
           ))}
         </div>

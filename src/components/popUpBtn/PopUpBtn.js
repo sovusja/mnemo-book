@@ -9,6 +9,7 @@ const PopUpBtn = (props) => {
       <img
         className="pop-up__btn--img"
         src={roadeMap.backgroundElement.fields.file.url}
+        alt="arrow"
       />
       <h3 className="pop-up__btn--text">Бродилка</h3>
     </div>

@@ -13,7 +13,7 @@
   position: relative;
 
   @include media-tablet {
-    height: 16vh;
+    height: 17vh;
     width: 80%;
     border-radius: 20px;
   }
@@ -30,9 +30,10 @@
       border-radius: 25%;
       position: absolute;
       z-index: -1;
+      object-fit: cover;
 
       @include media-tablet {
-        height: 16vh;
+        height: 17vh;
         width: 100%;
         border-radius: 20px;
       }
@@ -43,7 +44,7 @@
       height: 100px;
       position: absolute;
       bottom: 4px;
-      left: 4px;
+      left: 0px;
 
       @include media-mobile {
         height: 75px;
@@ -67,9 +68,9 @@
     font-weight: 400;
 
     @include media-tablet {
-      height: 115px;
-      width: 115px;
-      padding: 0;
+      height: 125px;
+      width: 125px;
+      padding: 5px;
       font-size: 11px;
     }
   }

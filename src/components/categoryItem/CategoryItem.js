@@ -13,10 +13,12 @@ const CategoryItem = (props) => {
       <img
         className="category-item__img-back"
         src={categoryData.backgroundElement.fields.file.url}
+        alt={categoryData.backgroundElement.fields.file.name}
       />
       <img
         className="category-item__img-animal"
         src={categoryData.backgroundAnimal.fields.file.url}
+        alt={categoryData.backgroundAnimal.fields.file.name}
       />
       <div className="category-item__inner">{categoryData.title}</div>
     </div>
