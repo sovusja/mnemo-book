@@ -25,7 +25,7 @@ const TrackElement = (props) => {
           {currentElementData.images.map((item, index) => (
             <TrackElementImg
               img={item.fields.image.fields.file.url}
-              alt={item.fields.image.fields.file.name}
+              alt={item.fields.image.fields.title}
               audio={item.fields?.sound?.fields.file.url}
               activeState={activeState}
               setActiveState={setActiveState}

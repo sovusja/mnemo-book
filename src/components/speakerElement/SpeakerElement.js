@@ -47,7 +47,7 @@ const SpeakerElement = (props) => {
       <img
         className="element-speaker__img"
         src={currentElementData.picture.fields.file.url}
-        alt={currentElementData.image.fields.file.name}
+        alt={currentElementData.picture.fields.title}
       />
       <h3 className="element-speaker__text2">{currentElementData.text2}</h3>
     </div>

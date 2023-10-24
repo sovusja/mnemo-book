@@ -39,11 +39,15 @@
     background-color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    text-align: center;
     width: 100%;
     cursor: pointer;
-
     font-family: $font-literata;
     font-size: 25px;
     font-weight: 600;
+
+    @include media-mobile {
+      height: 75px;
+    }
   }
 }

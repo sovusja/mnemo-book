@@ -39,7 +39,7 @@ const Category = (props) => {
         <img
           className="page__background"
           src={categoryData.background.fields.file.url}
-          alt={categoryData.background.fields.file.name}
+          alt={categoryData.background.fields.title}
         />
       )}
 

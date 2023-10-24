@@ -3,7 +3,6 @@ import "./SoundItem.scss";
 
 const SoundItem = (props) => {
   const { soundData, setActiveSoundsData } = props;
-  console.log(soundData);
 
   const clickHandler = () => {
     setActiveSoundsData(soundData);
@@ -14,12 +13,12 @@ const SoundItem = (props) => {
       <img
         className="sound-item__img-back"
         src={soundData.backgroundElement.fields.file.url}
-        alt={soundData.backgroundElement.fields.file.name}
+        alt={soundData.backgroundElement.fields.title}
       />
       <img
         className="sound-item__img-animal"
         src={soundData.backgroundAnimal.fields.file.url}
-        alt={soundData.backgroundAnimal.fields.file.name}
+        alt={soundData.backgroundAnimal.fields.title}
       />
       <div className="sound-item__inner">{soundData.shortName}</div>
     </div>

@@ -32,7 +32,7 @@ const TableElement = (props) => {
         <img
           className="element-table__img"
           src={currentElementData.image.fields.file.url}
-          alt={currentElementData.image.fields.file.name}
+          alt={currentElementData.image.fields.title}
         />
         <h3 className="element-table__text">{currentElementData.text}</h3>
         {soundData && (
