@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .page__background {
   position: fixed;
   z-index: -1;
@@ -5,8 +6,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-@import "../../global.scss";
 
 .table {
   display: flex;
@@ -25,7 +24,7 @@
     border-radius: 30px;
     border: 4px solid #420b0b;
     margin-bottom: 50px;
-    width: 500px;
+    width: 620px;
     text-align: center;
     font-family: $font-literata;
 
@@ -33,6 +32,10 @@
       @include media-mobile {
         font-size: 20px;
       }
+    }
+
+    @include media-small-tablet {
+      width: 500px;
     }
 
     @include media-mobile {

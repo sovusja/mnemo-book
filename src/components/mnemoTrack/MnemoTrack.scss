@@ -19,6 +19,7 @@
     border: 4px solid #420b0b;
     margin-bottom: 50px;
     font-family: $font-literata;
+    text-align: center;
 
     &--title {
       @include media-mobile {

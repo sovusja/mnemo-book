@@ -16,7 +16,11 @@ const SpeakerElement = (props) => {
       setActiveState(index);
     }
 
-    if (!soundData1 || !soundData2 || (!isActive && activeState)) {
+    if (
+      !soundData1 ||
+      !soundData2 ||
+      (!isActive && (activeState || activeState === 0))
+    ) {
       return;
     }
 
