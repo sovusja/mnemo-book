@@ -11,6 +11,17 @@ $font-sofia: "Sofia Sans", sans-serif;
   }
 }
 
+@mixin media-medium-tablet {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin media-small-tablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
 @mixin media-mobile {
   @media screen and (max-width: 767px) {
     @content;

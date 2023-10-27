@@ -1,0 +1,64 @@
+@import "../../global.scss";
+
+.travel__content__elem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @include media-mobile {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-img {
+    height: 150px;
+    border-radius: 15px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    @include media-medium-tablet {
+      height: 130px;
+    }
+
+    @include media-small-tablet {
+      height: 105px;
+    }
+
+    @include media-mobile {
+      width: 200px;
+      height: auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &-arrow {
+    height: 100px;
+
+    @include media-medium-tablet {
+      height: 70px;
+    }
+
+    @include media-small-tablet {
+      height: 45px;
+    }
+
+    @include media-mobile {
+      display: none;
+    }
+
+    &-down {
+      transform: rotate(90deg);
+      height: 60px;
+      width: 50px;
+      display: none;
+
+      @include media-mobile {
+        display: block;
+      }
+    }
+  }
+}
