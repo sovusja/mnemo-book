@@ -29,6 +29,10 @@
     font-size: 20px;
     font-weight: 300;
     margin-right: 20px;
+
+    @include media-mobile {
+      font-size: 16px;
+    }
   }
   &__title {
     position: absolute;
@@ -55,7 +59,21 @@
     }
 
     @include media-mobile {
-      top: 20%;
+      top: 17%;
+    }
+
+    &--title {
+      @include media-mobile {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    &--sub-title {
+      @include media-mobile {
+        font-size: 16px;
+        font-weight: 600;
+      }
     }
   }
 }

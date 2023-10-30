@@ -32,7 +32,7 @@ const MnemoTable = (props) => {
 
         <div
           style={{
-            maxWidth: `${isSixPictures ? "1239px" : "1250px"}`,
+            maxWidth: `${isSixPictures ? "1239px" : "1255px"}`,
           }}
           className="table__block"
         >
