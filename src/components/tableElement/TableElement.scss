@@ -20,14 +20,17 @@
     &__img {
       width: 100%;
       padding: 10px;
+      padding-bottom: 10px;
     }
+
     &__text {
       text-align: center;
-      padding-top: 10px;
       font-family: $font-literata;
       font-size: 16px;
       font-weight: 600;
+      padding-top: 3px;
     }
+
     audio {
       display: none;
     }
@@ -39,7 +42,6 @@
   }
   &__text {
     text-align: center;
-    padding-top: 10px;
     font-family: $font-literata;
     font-size: 16px;
     font-weight: 600;

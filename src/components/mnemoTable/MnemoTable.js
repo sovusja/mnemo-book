@@ -28,6 +28,7 @@ const MnemoTable = (props) => {
       <div className="table">
         <div className="table__title">
           <h1 className="table__title--title">{currentActivity.title}</h1>
+          <h1 className="table__title--title">{currentActivity.titleText}</h1>
         </div>
 
         <div

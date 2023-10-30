@@ -96,3 +96,13 @@
     flex-direction: column;
   }
 }
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  @include media-tablet {
+    position: static;
+  }
+}

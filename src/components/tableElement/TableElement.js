@@ -5,6 +5,8 @@ const TableElement = (props) => {
   const { currentElementData, activeState, count, setActiveState, index } =
     props;
 
+  console.log(currentElementData);
+
   const soundData = currentElementData?.sound?.fields;
   const audioRef = useRef(null);
   const isActive = activeState === index;
@@ -35,6 +37,7 @@ const TableElement = (props) => {
           alt={currentElementData.image.fields.title}
         />
         <h3 className="element-table__text">{currentElementData.text}</h3>
+        <h3 className="element-table__text">{currentElementData.textTitle}</h3>
         {soundData && (
           <audio ref={audioRef} controls>
             <source src={soundData.file.url} type="audio/ogg"></source>
