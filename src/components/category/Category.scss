@@ -50,7 +50,7 @@
     flex-wrap: wrap;
 
     @include media-tablet {
-      height: 16vh;
+      height: auto;
       width: 80%;
     }
   }
