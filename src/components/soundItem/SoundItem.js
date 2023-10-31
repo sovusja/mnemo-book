@@ -2,11 +2,15 @@ import React from "react";
 import "./SoundItem.scss";
 
 const SoundItem = (props) => {
-  const { soundData, setActiveSoundsData } = props;
+  const { soundData, setActiveSoundsData, isAuth } = props;
 
   const clickHandler = () => {
     setActiveSoundsData(soundData);
   };
+
+  if (!soundData.isDemo && !isAuth) {
+    return null;
+  }
 
   return (
     <div onClick={clickHandler} className="sound-item">

@@ -40,6 +40,7 @@ const CleanSpeaker = (props) => {
           })}
         </div>
       </div>
+      <p className="copyright">© Лілія Зайдулліна 2023</p>
     </>
   );
 };

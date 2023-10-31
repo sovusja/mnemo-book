@@ -76,6 +76,7 @@ const Sound = (props) => {
             setCurrentActivity={setCurrentActivity}
           />
         </div>
+        <p className="copyright">© Лілія Зайдулліна 2023</p>
       </div>
     </>
   );

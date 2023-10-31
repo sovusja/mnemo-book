@@ -12,6 +12,7 @@ const Category = (props) => {
     setActiveSoundsData,
     isShowPopUp,
     setIsShowPopUp,
+    isAuth,
   } = props;
 
   const clickHandlerBack = () => {
@@ -66,10 +67,12 @@ const Category = (props) => {
                 key={elem.fields.id}
                 soundData={elem.fields}
                 setActiveSoundsData={setActiveSoundsData}
+                isAuth={isAuth}
               />
             );
           })}
         </div>
+        <p className="copyright">© Лілія Зайдулліна 2023</p>
       </div>
     </>
   );

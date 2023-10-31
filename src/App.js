@@ -9,6 +9,7 @@ import MnemoTrack from "./components/mnemoTrack/MnemoTrack";
 import MnemoTable from "./components/mnemoTable/MnemoTable";
 import CleanSpeaker from "./components/cleanSpeaker/CleanSpeaker";
 import LoaderGif from "./assets/Spinner-1s-200px.gif";
+import PopUpForm from "./components/popUpForm/PopUpForm";
 
 function App() {
   const space = process.env.REACT_APP_SPACE;
@@ -19,6 +20,9 @@ function App() {
   const [activeSoundsData, setActiveSoundsData] = useState(null);
   const [currentActivity, setCurrentActivity] = useState(null);
   const [isShowPopUp, setIsShowPopUp] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("auth"));
+
+  console.log(isAuth);
 
   const { authorName, title, subtitle, background, categories } = content;
 
@@ -80,6 +84,7 @@ function App() {
         <div className="main__author">
           <p className="main__author--text">{authorName}</p>
         </div>
+        <PopUpForm isAuth={isAuth} />
         <div className="main__title">
           <h1 className="main__title--title">{title}</h1>
           <h2 className="main__title--sub-title">{subtitle}</h2>
@@ -93,10 +98,11 @@ function App() {
                   key={elem.fields.id}
                   categoryData={elem.fields}
                   setActiveCategoryData={setActiveCategoryData}
+                  isAuth={isAuth}
                 />
               );
             })}
-            <p className="copyright">Лілія Зайдулліна © 2023</p>
+            <p className="copyright">© Лілія Зайдулліна 2023</p>
           </div>
         )}
       </div>
@@ -135,6 +141,7 @@ function App() {
         setActiveSoundsData={setActiveSoundsData}
         isShowPopUp={isShowPopUp}
         setIsShowPopUp={setIsShowPopUp}
+        isAuth={isAuth}
       />
     );
   }

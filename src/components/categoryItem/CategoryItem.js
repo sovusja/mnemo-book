@@ -2,11 +2,15 @@ import React from "react";
 import "./CategoryItem.scss";
 
 const CategoryItem = (props) => {
-  const { categoryData, setActiveCategoryData } = props;
+  const { categoryData, setActiveCategoryData, isAuth } = props;
 
   const clickHandler = () => {
     setActiveCategoryData(categoryData);
   };
+
+  if (!categoryData.isDemo && !isAuth) {
+    return null;
+  }
 
   return (
     <div onClick={clickHandler} className="category-item">
