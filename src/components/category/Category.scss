@@ -14,21 +14,14 @@
   align-items: center;
   padding-top: 50px;
 
+  @include media-mobile {
+    height: 100vh;
+    justify-content: flex-start;
+  }
+
   .copyright {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: white;
-
-    @include media-tablet {
-      font-size: 14px;
-      text-align: center;
-    }
-
     @include media-mobile {
-      color: black;
-      right: 50%;
-      transform: translateX(50%);
+      margin-top: auto;
     }
   }
 
