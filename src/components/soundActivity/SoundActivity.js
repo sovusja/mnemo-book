@@ -20,7 +20,13 @@ const SoundActivity = (props) => {
         src={activityData.backgroundAnimal.fields.file.url}
         alt={activityData.backgroundAnimal.fields.title}
       />
-      <div className="sound-activity__inner">{activityData.title}</div>
+      <div className="sound-activity__inner">
+        <h3>
+          {activityData.type === "speaker" ? "чистомовки " : ""}
+          {activityData.titleTitle}
+        </h3>
+        <h3>{activityData.titleText}</h3>
+      </div>
     </div>
   );
 };

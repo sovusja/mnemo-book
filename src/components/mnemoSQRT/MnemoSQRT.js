@@ -23,6 +23,7 @@ const MnemoSQRT = (props) => {
       <div className="sqrt">
         <div className="sqrt__title">
           <h1 className="sqrt__title--title">{currentActivity.title}</h1>
+          <h1 className="sqrt__title--title">{currentActivity.titleTitle}</h1>
         </div>
 
         <div className="sqrt__block">
@@ -36,7 +37,7 @@ const MnemoSQRT = (props) => {
           })}
         </div>
       </div>
-      <p className="copyright">© Лілія Зайдулліна 2023</p>
+      <p className="copyright">© Лілія Зайдулліна, 2023</p>
     </>
   );
 };

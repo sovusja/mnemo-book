@@ -24,6 +24,9 @@ const CleanSpeaker = (props) => {
       <div className="speaker">
         <div className="speaker__title">
           <h1 className="speaker__title--title">{currentActivity.title}</h1>
+          <h1 className="speaker__title--title">
+            {currentActivity.titleTitle}
+          </h1>
         </div>
 
         <div className="speaker__block">
@@ -40,7 +43,7 @@ const CleanSpeaker = (props) => {
           })}
         </div>
       </div>
-      <p className="copyright">© Лілія Зайдулліна 2023</p>
+      <p className="copyright">© Лілія Зайдулліна, 2023</p>
     </>
   );
 };

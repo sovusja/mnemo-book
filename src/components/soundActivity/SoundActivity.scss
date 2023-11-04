@@ -66,6 +66,7 @@
     font-family: $font-literata;
     font-size: 14px;
     font-weight: 400;
+    flex-direction: column;
 
     @include media-tablet {
       height: 125px;

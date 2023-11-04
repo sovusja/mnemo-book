@@ -27,7 +27,10 @@ const MnemoTable = (props) => {
       <BackBtn isOnTop onClick={clickHandler} />
       <div className="table">
         <div className="table__title">
-          <h1 className="table__title--title">{currentActivity.title}</h1>
+          <h1 className="table__title--title">
+            {currentActivity.title} {currentActivity.titleTitle}
+          </h1>
+          {/* <h1 className="table__title--title">{currentActivity.titleTitle}</h1> */}
           <h1 className="table__title--title">{currentActivity.titleText}</h1>
         </div>
 
@@ -51,7 +54,7 @@ const MnemoTable = (props) => {
           })}
         </div>
       </div>
-      <p className="copyright">© Лілія Зайдулліна 2023</p>
+      <p className="copyright">© Лілія Зайдулліна, 2023</p>
     </>
   );
 };

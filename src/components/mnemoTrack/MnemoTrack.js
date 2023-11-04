@@ -23,6 +23,7 @@ const MnemoTrack = (props) => {
       <div className="track">
         <div className="track__title">
           <h1 className="track__title--title">{currentActivity.title}</h1>
+          <h1 className="track__title--title">{currentActivity.titleTitle}</h1>
         </div>
         <div className="track__block">
           {currentActivity.phrases.map((elem) => {
@@ -35,7 +36,7 @@ const MnemoTrack = (props) => {
           })}
         </div>
       </div>
-      <p className="copyright">© Лілія Зайдулліна 2023</p>
+      <p className="copyright">© Лілія Зайдулліна, 2023</p>
     </>
   );
 };

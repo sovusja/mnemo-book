@@ -22,8 +22,6 @@ function App() {
   const [isShowPopUp, setIsShowPopUp] = useState(false);
   const [isAuth, setIsAuth] = useState(localStorage.getItem("auth"));
 
-  console.log(isAuth);
-
   const { authorName, title, subtitle, background, categories } = content;
 
   const client = useMemo(
@@ -102,7 +100,7 @@ function App() {
                 />
               );
             })}
-            <p className="copyright">© Лілія Зайдулліна 2023</p>
+            <p className="copyright">© Лілія Зайдулліна, 2023</p>
           </div>
         )}
       </div>
