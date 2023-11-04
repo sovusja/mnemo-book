@@ -13,8 +13,13 @@
   overflow: hidden;
 
   @include media-tablet {
-    height: 16vh;
-    width: 80%;
+    height: 300px;
+    width: 20%;
+  }
+  @include media-mobile {
+    align-items: flex-start;
+    height: 200px;
+    width: 30%;
   }
 
   &:hover {
@@ -31,8 +36,11 @@
       object-fit: cover;
       z-index: -1;
       @include media-tablet {
-        height: 16vh;
+        height: 300px;
         width: 100%;
+      }
+      @include media-mobile {
+        height: 200px;
       }
     }
 
@@ -72,6 +80,12 @@
       height: 12vh;
       width: 12vh;
       font-size: 16px;
+    }
+
+    @include media-mobile {
+      width: 80px;
+      height: 80px;
+      margin-top: 25px;
     }
   }
 }
