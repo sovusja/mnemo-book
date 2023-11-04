@@ -103,6 +103,7 @@
   right: 10px;
 
   @include media-tablet {
+    font-size: 14px;
     position: static;
     text-align: center;
   }
