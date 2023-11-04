@@ -21,11 +21,11 @@ const SoundActivity = (props) => {
         alt={activityData.backgroundAnimal.fields.title}
       />
       <div className="sound-activity__inner">
-        <h3>
+        <p>
           {activityData.type === "speaker" ? "чистомовки " : ""}
           {activityData.titleTitle}
-        </h3>
-        <h3>{activityData.titleText}</h3>
+        </p>
+        <p>{activityData.titleText}</p>
       </div>
     </div>
   );
