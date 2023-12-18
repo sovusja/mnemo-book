@@ -8,10 +8,21 @@ const SqrtElement = (props) => {
   const audioRef = useRef(null);
 
   const clickHandler = () => {
-    if (!soundData) {
+    if (!soundData || !audioRef.current) {
       return;
     }
-    audioRef.current.play();
+
+    if (audioRef.current.paused) {
+      const playPromise = audioRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then((_) => {})
+          .catch((error) => {
+            console.error("Autoplay was prevented:", error);
+          });
+      }
+    }
   };
 
   return (
@@ -24,7 +35,7 @@ const SqrtElement = (props) => {
       <h3 className="element-sqrt__text">{currentElementData.text}</h3>
       {soundData && (
         <audio ref={audioRef} controls>
-          <source src={soundData.file.url} type="audio/ogg"></source>
+          <source src={soundData.file.url} type="audio/ogg" />
         </audio>
       )}
     </div>
