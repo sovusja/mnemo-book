@@ -13,7 +13,7 @@
   overflow: hidden;
 
   @include media-tablet {
-    height: 300px;
+    height: 220px;
     width: 20%;
   }
   @include media-mobile {
@@ -36,7 +36,7 @@
       object-fit: cover;
       z-index: -1;
       @include media-tablet {
-        height: 300px;
+        height: 220px;
         width: 100%;
       }
       @include media-mobile {
@@ -51,15 +51,15 @@
       left: 4px;
       position: absolute;
 
+      @include media-tablet {
+        height: 75px;
+        width: 75px;
+      }
+
       @include media-mobile {
         height: 75px;
         width: 75px;
       }
-    }
-
-    @include media-tablet {
-      height: 16vh;
-      width: 80%;
     }
   }
 
@@ -77,8 +77,8 @@
     font-weight: 400;
 
     @include media-tablet {
-      height: 12vh;
-      width: 12vh;
+      height: 17vh;
+      width: 17vh;
       font-size: 16px;
     }
 

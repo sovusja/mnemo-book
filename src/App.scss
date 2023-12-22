@@ -55,7 +55,7 @@
 
     @include media-tablet {
       padding: 10px;
-      top: 17%;
+      top: 22%;
       font-size: 12px;
     }
 
@@ -111,7 +111,7 @@
 
   @include media-tablet {
     flex-direction: row;
-    bottom: 30px;
+    bottom: 20px;
   }
 }
 
